@@ -1,0 +1,68 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.imageWrapper {
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #10b981;
+  width: 7rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a0a0a;
+  background-clip: content-box;
+  mask-image: radial-gradient(circle, white 98%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, white 98%, transparent 100%);
+}
+
+.image {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+  background-color: #0a0a0a;
+  mix-blend-mode: multiply;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  opacity: 0;
+  color: white;
+  font-size: 0.875rem;
+  transition: opacity 0.3s ease;
+}
+
+.imageWrapper:hover .overlay {
+  opacity: 1;
+}
+
+.input {
+  display: none;
+}
+
+.removeButton {
+  font-size: 0.75rem;
+  color: #9ca3af; /* neutral-400 */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  color: #f87171; /* red-400 */
+}
